@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+
+  # Ollama container
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    # Automatically pull model if needed — optional:
+    # entrypoint: /bin/sh -c "ollama pull codellama:7b && ollama serve"
+
+  # MAS container
+  mas:
+    build: .
+    container_name: code-refactor-mas
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    command: python updated_main_with_rich.py
+    volumes:
+      - ./input_code:/app/input_code
+      - ./output_code:/app/output_code
+
+volumes:
+  ollama_data:

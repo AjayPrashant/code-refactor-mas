@@ -1,0 +1,17 @@
+# Python venv
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VSCode settings
+.vscode/
+
+# Output files
+output_code/
+
+# Ollama models (if local)
+~/.ollama/
+
+code-refactor-mas_ollama_data/
