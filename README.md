@@ -29,3 +29,5 @@ pip install -r requirements.txt
 2️⃣ Run MAS:
 
 ```bash
+python updated_main_with_rich.py
+```
