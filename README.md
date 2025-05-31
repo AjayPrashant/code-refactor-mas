@@ -9,6 +9,12 @@ A multi-agent system that automatically analyzes, refactors, reviews, and genera
 
 ---
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
 ## How to run locally
 
 1️⃣ Start Ollama:
