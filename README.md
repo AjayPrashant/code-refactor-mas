@@ -15,15 +15,19 @@ A multi-agent system that automatically analyzes, refactors, reviews, and genera
 
 ```bash
 ollama serve
-
 ollama pull codellama:7b
+```
 
 2️⃣ Install dependencies:
 
+```bash 
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+```
 
 2️⃣ Run MAS:
 
+```bash
 python updated_main_with_rich.py
+```
